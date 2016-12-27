@@ -1,0 +1,15 @@
+<template name="room_page">
+    <!-- room_page -->
+    <div class="room_page">
+        <h1>Here we have all the participants</h1>
+        {{#each participant in getParticipants}}
+        <div class="participant">
+            <div>{{participant.id}}</div>
+            <video src=""></video>
+            <div class="controls"></div>
+        </div>
+        {{/each}}
+        {{>own_player localPlayerData}}
+    </div>
+    <!-- room_page -->
+</template>
